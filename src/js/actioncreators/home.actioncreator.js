@@ -16,7 +16,6 @@
                 }
 
                 function setUsername(username) {
-                    console.log('Dispatching username:', username);
                     flux.dispatch('User.setUsername', username);
                 }
 

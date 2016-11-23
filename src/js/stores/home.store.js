@@ -31,7 +31,6 @@
                         // }
                     },
                     setUsername: function (payload) {
-                        console.log('Setting username');
                         this.state.set(['username'], payload);
                     },
                     exports: {
