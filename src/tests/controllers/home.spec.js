@@ -46,7 +46,7 @@
 
         describe('$scope.$listenTo', function () {
 
-            it('should listen to the HomeStore \'setUsername\' event', function () {
+            it('should listen to the HomeStore \'setUsername\' event on initialize()', function () {
                 var store = $injector.get('ngFlux.HomeStore');
 
                 sinon.spy($rootScope, '$listenTo');
@@ -57,7 +57,7 @@
                 $rootScope.$listenTo.restore();
             });
 
-            it('should listen to the HomeStore \'setUser\' event', function () {
+            it('should listen to the HomeStore \'setUser\' event on initialize()', function () {
                 var store = $injector.get('ngFlux.HomeStore');
 
                 sinon.spy($rootScope, '$listenTo');
@@ -66,6 +66,10 @@
                 expect($rootScope.$listenTo.calledWith(store, ['user'])).to.eql(true);
 
                 $rootScope.$listenTo.restore();
+            });
+
+            it.skip('should run updateUsername() & check $timeout', function () {
+                expect(1).to.equal(1);
             });
 
         });
