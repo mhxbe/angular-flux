@@ -32,7 +32,6 @@
                 // --- Initialize ---
 
                 function initialize() {
-                    debugger;
                     $scope.$listenTo(HomeStore, ['username'], updateUsername);
                     $scope.$listenTo(HomeStore, ['user'], updateUser);
                 }
@@ -68,10 +67,7 @@
                 }
 
                 function getUsername() {
-                    HomeActioncreator.getUsername()
-                        .then(function onGotUsername(username) {
-                            vm.username = username;
-                        });
+                    vm.username = HomeActioncreator.getUsername();
                 }
 
 
