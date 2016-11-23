@@ -1,6 +1,10 @@
 <h2>Home</h2>
 
 <p>Username: {{ home.username }}</p>
+<small>Set Username:</small>
+<button type="button" ng-click="home.setUsername('Mikey')">Mikey</button>
+<button type="button" ng-click="home.setUsername('Bob')">Bob</button>
+<button type="button" ng-click="home.setUsername('Purple Rat')">Purple Rat</button>
 
 <hr>
 
@@ -9,12 +13,7 @@
 <p>user.lastName: {{ home.user.lastName }}</p>
 <p>user.age: {{ home.user.age }}</p>
 
-<hr>
-<h3>Set Username:</h3>
-<button type="button" ng-click="home.setUsername('Mikey')">Mikey</button>
-<button type="button" ng-click="home.setUsername('Bob')">Bob</button>
-<button type="button" ng-click="home.setUsername('Purple Rat')">Purple Rat</button>
-
-<h3>Set user:</h3>
+<small>Set user:</small>
 <button type="button" ng-click="home.setUser({firstName: 'Mike', lastName: 'Henderyckx', age: 25})">Mike Henderyckx 25</button>
+
 <hr>
