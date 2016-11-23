@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ngFlux</title>
+
+    <link rel="icon" href="/img/favicon.ico">
+</head>
+<body ng-app="ngFlux">
+    <h1>ngFlux</h1>
+
+    <div ui-view></div>
+
+    <footer>Made with love by mhx.</footer>
+
+    <!-- inject:js -->
+    <script src="components/angular/angular.js"></script>
+    <script src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="components/flux-angular/release/flux-angular.min.js"></script>
+
+    <script src="js/module.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/stores/home.store.js"></script>
+    <script src="js/actioncreators/home.actioncreator.js"></script>
+    <script src="js/controllers/home.controller.js"></script>
+    <!-- endinject -->
+
+</body>
+</html>

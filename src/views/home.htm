@@ -1,0 +1,20 @@
+<h2>Home</h2>
+
+<p>Username: {{ home.username }}</p>
+
+<hr>
+
+<h3>USERO</h3>
+<p>user.firstName: {{ home.user.firstName }}</p>
+<p>user.lastName: {{ home.user.lastName }}</p>
+
+<hr>
+<h3>Set Username:</h3>
+<button type="button" ng-click="home.setUsername('Mikey')">Mikey</button>
+<button type="button" ng-click="home.setUsername('Bob')">Bob</button>
+<button type="button" ng-click="home.setUsername('Purple Rat')">Purple Rat</button>
+
+<h3>Set user:</h3>
+<button type="button" ng-click="home.setUser({firstName: 'Mike'})">Mike</button>
+<button type="button" ng-click="home.setUser({lastName: 'Henderyckx'})">Henderyckx</button>
+<hr>
