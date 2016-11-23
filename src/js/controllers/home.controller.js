@@ -32,6 +32,7 @@
                 // --- Initialize ---
 
                 function initialize() {
+                    debugger;
                     $scope.$listenTo(HomeStore, ['username'], updateUsername);
                     $scope.$listenTo(HomeStore, ['user'], updateUser);
                 }
@@ -66,7 +67,7 @@
                     HomeActioncreator.setUser(user);
                 }
 
-                function getUser() {
+                function getUsername() {
                     HomeActioncreator.getUsername()
                         .then(function onGotUsername(username) {
                             vm.username = username;
@@ -78,7 +79,7 @@
 
                 vm.setUsername = setUsername;
                 vm.setUser = setUser;
-                vm.getUset = getUser;
+                vm.getUsername = getUsername;
 
 
                 // --- Initialize ---

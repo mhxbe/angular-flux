@@ -23,12 +23,6 @@
                     },
                     setUser: function (payload) {
                         this.state.set('user', payload.user);
-                        // if (payload.user.firstName) {
-                        //     this.state.set(['user', 'firstName'], payload.user.firstName);
-                        // }
-                        // if (payload.user.lastName) {
-                        //     this.state.set(['user', 'lastName'], payload.user.lastName);
-                        // }
                     },
                     setUsername: function (payload) {
                         this.state.set(['username'], payload);
