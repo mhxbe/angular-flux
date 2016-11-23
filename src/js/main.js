@@ -25,12 +25,6 @@
 
             $urlRouterProvider.otherwise('/');
 
-        })
-
-        .run(function() {
-            console.log('let us run');
-            console.info('yoyo');
-            console.log('Snap je dat?');
         });
 
 })(window.angular);
