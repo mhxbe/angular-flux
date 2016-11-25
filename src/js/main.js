@@ -11,7 +11,7 @@
         ) {
 
             fluxProvider.setImmutableDefaults({ immutable: false });
-            fluxProvider.useEvalAsync(false);
+            fluxProvider.useEvalAsync(true); // default false
             fluxProvider.autoInjectStores(true);
 
             $stateProvider
