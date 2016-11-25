@@ -6,15 +6,11 @@
         .controller('ngFlux.HomeController', [
 
             '$scope',
-            '$state',
-            '$timeout',
             'ngFlux.HomeActioncreator',
             'ngFlux.HomeStore',
 
             function (
                 $scope,
-                $state,
-                $timeout,
                 HomeActioncreator,
                 HomeStore
             ) {
@@ -31,6 +27,7 @@
 
                 // --- Initialize ---
 
+
                 function initialize() {
                     $scope.$listenTo(HomeStore, ['username'], updateUsername);
                     $scope.$listenTo(HomeStore, ['user'], updateUser);
@@ -41,17 +38,13 @@
 
                 function updateUsername(payload) {
                     if (payload.data) {
-                        $timeout(function () {
-                            vm.username = payload.data.currentData;
-                        });
+                        vm.username = payload.data.currentData;
                     }
                 }
 
                 function updateUser(payload) {
                     if (payload.data) {
-                        $timeout(function () {
-                            vm.user = payload.data.currentData;
-                        });
+                        vm.user = payload.data.currentData;
                     }
                 }
 
