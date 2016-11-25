@@ -70,6 +70,10 @@
                 vm.setUser = setUser;
                 vm.getUsername = getUsername;
 
+                // For testing purposes
+                vm.updateUsername = updateUsername;
+                vm.updateUser = updateUser;
+
 
                 // --- Initialize ---
 
