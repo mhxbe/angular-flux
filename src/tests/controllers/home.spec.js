@@ -68,10 +68,6 @@
                 $rootScope.$listenTo.restore();
             });
 
-            it.skip('should run updateUsername() & check $timeout', function () {
-                expect(1).to.equal(1);
-            });
-
         });
 
         describe('Trigger actions', function () {
