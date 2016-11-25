@@ -70,6 +70,41 @@
 
         });
 
+        describe('Set controller variables', function () {
+
+            it('should set vm.username', function () {
+                var ctrl = $getController();
+                var username = 'Mikey Spikey';
+
+                ctrl.updateUsername({ data: { currentData: username } });
+                expect(ctrl.username).to.equal('Mikey Spikey');
+            });
+
+            it('should not set vm.username', function () {
+                var ctrl = $getController();
+
+                ctrl.updateUsername({});
+                expect(ctrl.username).to.equal('');
+            });
+
+            it('should set vm.user', function () {
+                var ctrl = $getController();
+                var user = { firstName: 'Mike', lastName: 'Henderyckx', age: 25 };
+
+                ctrl.updateUser({ data: { currentData: user } });
+                expect(ctrl.user).to.equal(user);
+            });
+
+            it('should not set vm.username', function () {
+                var ctrl = $getController();
+                var user = { firstName: 'Mike', lastName: 'Henderyckx', age: 25 };
+
+                ctrl.updateUser({});
+                expect(ctrl.user).to.not.equal(user);
+            });
+
+        });
+
         describe('Trigger actions', function () {
 
             it('should run setUsername() action', function () {
